@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Parallel Test Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="IE Test(failed)">
-    <parameter name="browser" value="ie"/>
+  <test thread-count="5" parallel="tests" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.TestBrowser">
+      <class name="tests.SampleTest">
         <methods>
-          <include name="browser" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- tests.TestBrowser -->
+      </class> <!-- tests.SampleTest -->
     </classes>
-  </test> <!-- IE Test(failed) -->
+  </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Parallel Test Suite] -->
